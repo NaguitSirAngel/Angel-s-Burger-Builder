@@ -6,7 +6,7 @@ import classes from "./Modal.module.css";
 class Modal extends Component {
 
     shouldComponentUpdate(nextProps, nextState){
-        return nextProps.show !== this.props.show;
+        return nextProps.show !== this.props.show || nextProps.children !== this.props.children;
         // if prev props and new props do not match, then it will update. (The props being compared is the show props)    
         // for perfomance improvement
     };
