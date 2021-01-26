@@ -8,6 +8,7 @@ class Modal extends Component {
     shouldComponentUpdate(nextProps, nextState){
         return nextProps.show !== this.props.show || nextProps.children !== this.props.children;
         // if prev props and new props do not match, then it will update. (The props being compared is the show props)    
+        // added SPINNER (if children changes it will update the modal as well)
         // for perfomance improvement
     };
 
